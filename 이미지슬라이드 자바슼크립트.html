@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #slideshow{
+            width: 800px; height: 300px; margin: 100px auto; position: relative ; overflow: hidden;
+
+
+        }
+
+        #slides{position: absolute;}
+
+        #slides img{width: 100%; float: left;}
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="slideshow">
+        <div id="slides">
+            <img src="images/001.jpg" alt="">
+            <img src="images/002.jpg" alt="">
+            <img src="images/003.jpg" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        var slides =document.querySelectorAll("#slides > img");
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        var current = 0;
+
+        prev.onclick = prevSlide;
+        next.onclick = nextSlide;
+
+
+
+        function showSlide(n){
+            // for(초기값 ; 비교조건 ; 증가값){}
+            for( let i =0 ; i < 2; i < slides.length -1 ; i++){
+                slides[i].style.display="none" ;
+            }
+            slides[n].style.display="block"
+        }
+        
+        function prevSlide(){
+            if(current >0){
+                current--;
+            }else{
+                current = slides.length -1;
+                showSlide(current);
+            }
+
+        }
+        function nextSlide(){
+            if(current < slides.length -1){
+                current++ 
+            }else{
+                current=0
+                showSlide(current);
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

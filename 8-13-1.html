@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img src="images/001.jpg" alt="001" id="car">
+
+
+
+        <img src="images/002.jpg" alt="002" class=" car1">
+        <img src="images/003.jpg" alt="002" class=" car1">
+        <img src="images/004.jpg" alt="002" class=" car1">
+        <img src="images/005.jpg" alt="002" class=" car1">
+    </div>
+
+    <script>
+        var car1 =  document.querySelector("#car");
+        console.log(car1)
+        // 또는 
+        var car2 =  document.getElementById("car");
+        console.log(car2)
+
+        var car3 = document.querySelectorAll(".car1")
+        console.log(car3)
+        console.log(car3[0])
+    </script>
+</body>
+</html> 

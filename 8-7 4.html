@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="java">
+        // function 함수명(매개변수,매개변수,...){
+        //     코드
+        //     return 반환값
+        // }
+
+        function numbering(){
+            for(var i=0; i<10; i++){
+                document.write(i)
+            }
+        }
+
+        numbering();
+        numbering();
+        numbering();
+        numbering();
+
+        function get_numbering1(){
+           return "홍길동"
+        }
+        function get_numbering2(){
+            return "김혜수"
+        }
+
+        get_numbering1();
+        document.write(get_numbering1())
+        get_numbering2();
+        
+        var n2 = get_numbering2()
+        document.write(n2)
+
+
+        function get_numbering3(){
+            return "이다운";
+            return "정다운";
+            return "박다운";
+        }
+        document.write(get_numbering3());
+
+        // function get_argument(arg){
+        //     return arg
+        // }
+
+        function get_argument1(x , y){
+            return x + y;
+        }
+
+        var g_arg1 = get_argument1(10 , 20);
+        document.write(g_arg1)
+
+
+        var get_argument2 = function(){
+
+        }
+
+        get_argument2();
+    </script>
+</body>
+</html>
